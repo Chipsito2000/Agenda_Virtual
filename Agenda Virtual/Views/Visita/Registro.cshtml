@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Agenda_Virtual.Models.Visita>
+
+
+@{
+    ViewData["titulo"] = "Bienvendio";
+
+
+}
+
+
+<head>
+
+    <link href="~/css/Registro.css" rel="StyleSheet">
+
+</head>
+
+
+<div class="px-2 pt-1 my-3 text-center">
+    <h1 class="display-4 fw-bold">Registro</h1>
+    <div class="col-lg-9 mx-auto">
+        <p class="lead mb-4">Listado oficial de visitas de cada padre de familia o tutor</p>
+    </div>
+</div>
+
+<form asp-controller="Visita" asp-action="Registro">
+    <p class="search">
+        Buscar alumno: <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar" class="busc btn btn-sm " />
+    </p>
+</form>
+
+<div class="vamo">
+    <table class="table">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">#</th>
+                <th scope="col">Alumno</th>
+                <th scope="col">Padre</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Escuela</th>
+                <th scope="col">Grado</th>
+                <th scope="col">Municipio</th>
+                <th scope="col">Observacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Alumno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Padre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Escuela)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Grado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Municipio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Observacion)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<form asp-action="Delete">
+    <input type="submit" value="Borrar registro" class=" juntos btn btn-md  position-absolute   text-dark btn-danger" />
+</form>
+
+<form asp-action="ExportarExcel">
+    <input type="submit" value="Exportar registro" class="juntos btn btn-md  text-dark position-absolute  end-0" />
+</form>
+

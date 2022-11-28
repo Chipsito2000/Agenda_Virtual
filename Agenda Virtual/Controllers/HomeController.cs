@@ -1,9 +1,11 @@
-﻿using Agenda_Virtual.Models;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace Agenda_Virtual.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,20 +15,31 @@ namespace Agenda_Virtual.Controllers
             _logger = logger;
         }
 
+
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+        public IActionResult Registro()
+        {
+            return View();
+        }
+        
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        //Metodo para salir de la sesion
+        public async Task<IActionResult> LogOut()
         {
-            return View();
+            //Autorizacion por cookie del usuario
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("LoginView", "Login");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+
+
     }
 }

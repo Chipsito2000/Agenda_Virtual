@@ -1,0 +1,24 @@
+﻿.form-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+    .form-row .form-control {
+        border: transparent;
+        background: transparent;
+        text-align: left;
+    }
+
+label {
+    color: royalblue;
+    font-family: 'Monserrat',sans-serif;
+}
+
+.btn {
+    width: 19%;
+    background-color: hotpink;
+    border: transparent;
+    border-radius: 15px 15px 15px 15px;
+}

@@ -1,0 +1,50 @@
+﻿
+.search {
+}
+
+    .search .form-text {
+        border-radius: 8px 8px 8px 8px;    
+    }
+    .search .busc {
+        background: hotpink;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+.vamo {
+    width: 105%;
+    height: 280px; /* Altura de ejemplo */
+    overflow: auto;
+}
+
+    .vamo table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+        .vamo table thead {
+            position: -webkit-sticky; /* Safari... */
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        .vamo table .table-primary {
+            background: #9370db
+        }
+
+        .vamo table thead th,
+        .vamo table tbody td {
+            border: 1px solid #000;
+        }
+
+
+
+.juntos {
+    display: inline-block;
+    position: absolute;
+    top: 550px;
+    width: 19%;
+    background-color: hotpink;
+    border: transparent;
+    border-radius: 15px 15px 15px 15px;
+}

@@ -3,29 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Agenda_Virtual</title>
+    <title>Agenda Virtual</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Agenda_Virtual.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom  mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Agenda_Virtual</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="navbar-brand flex-fill" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/Img/2.png" alt="Logo" width="40" height="35">
+                    Agenda Virtual y Control Generala
+                </a>
+                <div class="navbar-collapse uk-hidden-small">
+                    <ul class="navbar-nav me-6 mb-2 mb-lg-0 w-75">
+                        <li class="nav-item col-2">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class="nav-item col-3">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Visita" asp-action="Registro">HISTORIAL</a>
+                        </li>
+                        <li class="nav-item col-3">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">ACERCA</a>
+                        </li>
+                        <li class="nav-item col-3">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LogOut">SALIR</a>
                         </li>
                     </ul>
+                    <span class="navbar-text">
+                        <b> Mario Alvarado</b>
+                    </span>
                 </div>
             </div>
         </nav>
@@ -38,7 +46,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Agenda_Virtual - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - Agenda Virtual y Control General<a class="nav justify-content-end" asp-controller="Home" asp-action="Contacto">Todos los derechos reservados (T.JC)</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

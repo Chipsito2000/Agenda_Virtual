@@ -1,8 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    ViewData["Title"] = "Bienvenido";
+}
+<head>
+    <link href="~/css/Index.css" rel="StyleSheet">
+</head>
+
+
+<div class="principal w-100">    
+    <div class="media flipped">
+        <div class="image"><img src="~/Img/ur6.png" alt="Leon Unidad6"></div>
+        <div class="content">
+            <h6 style="font-size: 2rem">Region 6</h6>
+            <h2 style="color: #4800ff;
+            font-family: 'Montserrat Light 300', sans-serif;">
+                <b>Encuentra trámites,<br /> servicios e información de <br /> manera clara, simple y <br /> rápida.</b>
+            </h2>
+            <a class="btn btn-lg btn-primary text-dark" asp-controller="Visita" asp-action="Visita"> <b>Registro</b> </a>
+        </div>
+    </div>
 </div>

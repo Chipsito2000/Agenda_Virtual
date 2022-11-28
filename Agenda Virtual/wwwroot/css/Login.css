@@ -1,0 +1,83 @@
+﻿@font-face {
+    font-family: 'Poppins';
+    src: url('~/font/Poppins')
+}
+
+
+
+body {
+    background: url(../img/body.jpg)center center no-repeat;
+    height: auto;
+    background-size: cover;
+}
+
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 85px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+    .login-box h2 {
+        margin: 0 0 30px;
+        padding: 5px;
+        color: #000;
+        text-align: center;
+        font-size: 39px;
+        font-family: 'Poppins Light 300',sans-serif;
+    }
+
+    .login-box .user-box {
+        position: relative;
+        right: 40px;
+    }
+
+        .login-box .user-box input {
+            width: 130%;
+            padding: 10px 0;
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 25px;
+            border: transparent;
+            outline: none;
+            background: paleturquoise;
+            border-radius: 6px 6px 6px 6px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login-box .user-box label {
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 25px;
+            color: #000;
+            pointer-events: none;
+            transition: .5s;
+            font-family: 'Poppins ExtraLight 200',sans-serif;
+        }
+
+        .login-box .user-box input:focus ~ label,
+        .login-box .user-box input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+
+    .login-box .btn {
+        color: #fff;
+        border: none;
+        border-radius: 23px;
+        padding: 0px;
+        min-height: 60px;
+        min-width: 130px;
+        background: deeppink;
+        font-size: 20px;
+        position: absolute;
+        left: 180px;
+    }

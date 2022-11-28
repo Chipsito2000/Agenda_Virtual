@@ -1,0 +1,40 @@
+﻿@model Agenda_Virtual.Models.Login
+@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+<head>
+    <link href="~/css/Login.css" rel="StyleSheet">
+    <title>Agenda Virtual</title>
+    
+</head>
+
+<body>
+    <form asp-controller="Login" asp-action="Login" method="post">
+        <div class="login-box">
+            <h2>Inicio de sesión</h2>
+            <!-- cuadro Email  -->
+            <div class="form-group user-box">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control " placeholder="Escribe tu usuario" asp-for="Usuario" />
+            </div>
+
+            <!-- cuadro Password  -->
+            <div class="form-group user-box ">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="Escribe tu Contraseña" asp-for="Contraseña" />
+            </div>
+
+            <!-- boton inicio -->
+            <button class="btn" type="submit">vamos</button>
+
+            @if (ViewData["ValidateMessage"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @ViewData["ValidateMessage"]
+                </div>                
+            }
+        </div>
+    </form>
+</body>
+

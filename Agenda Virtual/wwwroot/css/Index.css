@@ -1,0 +1,40 @@
+﻿@font-face {
+    font-family: 'Montserrat';
+    src: url('~/font/Montserrat/')
+}
+
+.media {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+}
+
+    .media.flipped {
+        flex-direction: row-reverse;
+    }
+
+    .media .content {
+        flex: 1;
+        padding: 10px;
+        font-family: 'Montserrat Thin 100', sans-serif;
+    }
+
+        .media .content .h6 {
+            
+            font-family: 'Montserrat Thin 100', sans-serif;
+        }
+
+        .media .content .h2 {
+            color: #4800ff;
+            font-family: 'Montserrat Light 300', sans-serif;
+        }
+
+        .media .btn {
+            position: relative;
+            left: 75px;
+            width: 40%;
+            background-color: hotpink;
+            border: transparent;
+            border-radius: 10px 10px 10px 10px;
+        }

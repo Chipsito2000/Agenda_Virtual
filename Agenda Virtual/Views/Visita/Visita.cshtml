@@ -1,0 +1,83 @@
+﻿@model Agenda_Virtual.Models.Visita;
+@{
+    ViewData["Title"] = "Bienvendio";
+}
+
+<head>
+
+    <link href="~/css/Visita.css" rel="StyleSheet">
+
+</head>
+
+
+<div class="px-2 pt-1 my-4 text-center">
+    <h1 class="display-4 fw-bold">Bienvenido</h1>
+    <div class="col-lg-9 mx-auto">
+        <p class="lead mb-4">En esta sección podras registrar los datos proporcionales a la situación actual del padre de familia</p>
+    </div>
+</div>
+
+<form asp-action="Crear" asp-controller="Visita">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Id"><b>Visita</b></label>
+            <input asp-for="Id" class="form-control" placeholder="Núm. Visita" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+
+        </div>
+        <div class="form-group col-md-11">
+            <b>
+                <label asp-for="Alumno"></label>
+            </b>
+            <input asp-for="Alumno" class="form-control" placeholder="Nombre del alumno" />
+            <span asp-validation-for="Alumno" class="text-danger"></span>
+
+        </div>
+        <div class="form-group col-md-11">
+            <b> <label asp-for="Padre" class="control-label"></label></b>
+            <input asp-for="Padre" class="form-control" placeholder="Nombre del padre/tutor" />
+            <span asp-validation-for="Padre" class="text-danger"></span>
+
+        </div>
+
+    </div>
+    <div class="form-row">
+
+        <div class="form-group col-md-10">
+            <b> <label asp-for="Escuela" class="control-label"></label> </b>
+            <input asp-for="Escuela" class="form-control" placeholder="Nombre del instituto" />
+            <span asp-validation-for="Escuela" class="text-danger"></span>
+
+        </div>
+        <div class="form-group col-md-9">
+            <b> <label asp-for="Grado" class="control-label"></label></b>
+            <input asp-for="Grado" class="form-control" placeholder="Grado del alumno" />
+            <span asp-validation-for="Grado" class="text-danger"></span>
+
+        </div>
+        <div class="form-group col-md-9">
+            <b> <label asp-for="Municipio" class="control-label"></label></b>
+            <input asp-for="Municipio" class="form-control" placeholder="Escribe el municipio" />
+            <span asp-validation-for="Municipio" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-11">
+            <b> <label asp-for="Telefono" class="control-label"></label></b>
+            <input asp-for="Telefono" class="form-control" placeholder="Telefono del padre/tutor" />
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+
+        </div>
+    </div>
+    <div class="form-row">
+
+        <div class="form-group col-md-12">
+            <b><label asp-for="Observacion" class="control-label"></label></b>
+            <input asp-for="Observacion" class="form-control" placeholder="Asunto de la visita" />
+            <span asp-validation-for="Observacion" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="form-group position-relative">
+        <input type="submit" value="REGISTRAR DATOS" class="btn btn-primary text-dark position-absolute bottom-0 end-0" />
+    </div>
+</form>
